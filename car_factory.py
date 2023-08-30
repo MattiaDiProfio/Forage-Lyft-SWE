@@ -8,11 +8,11 @@ from engine.willoughby_engine import WilloughbyEngine
 from battery.nubbin_battery import NubbinBattery
 from battery.spindler_battery import SpindlerBattery
 # model classes for all cars in the Lyft fleet
-from calliope import Calliope
-from glissade import Glissade
-from palindrome import Palindrome
-from roscharch import Roscharch
-from thovex import Thovex
+from models.calliope import Calliope
+from models.glissade import Glissade
+from models.palindrome import Palindrome
+from models.roscharch import Roscharch
+from models.thovex import Thovex
 
 class CarFactory:
 
