@@ -1,5 +1,5 @@
 from battery import Battery 
-from datetime import date
+from datetime import date, datetime
 
 class SpindlerBattery(Battery):
 
@@ -8,4 +8,4 @@ class SpindlerBattery(Battery):
         self.current_date = current_date
 
     def needs_service(self) -> bool:
-        return (self.current_date - self.last_service_date).days > (4 * 365)
+        return (datetime.strptime(self.current_date, "%m-%d-%Y") - datetime.strptime(self.last_service_date, "%m-%d-%Y")).days > (4 * 365)
